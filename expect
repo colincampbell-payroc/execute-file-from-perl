@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my @args = @ARGV;
+
+my $command = "expect " . join( " ", @args );
+print "MOCK: $command\n";
+exit 0;

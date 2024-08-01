@@ -20,6 +20,9 @@ RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/s
 
 EXPOSE 22
 
+COPY expect /usr/bin/expect
+RUN chmod +x /usr/bin/expect
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
